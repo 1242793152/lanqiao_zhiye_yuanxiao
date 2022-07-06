@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getLong(str){
+      let arr = str.split('')
+      let maxlong  = 0
+      let newarr = []
+      for(let i =0;i<arr.length;i++){
+        console.log(i)
+        if(newarr.indexOf(arr[i]) === -1 ){
+          newarr.push(arr[i])
+          if(newarr.length>maxlong){
+            maxlong = newarr.length
+          }
+          console.log(newarr)
+        }else{
+          // console.log(newarr.indexOf(arr[i]))
+          i = newarr.indexOf(arr[i])
+          i = i+1
+          console.log(i)
+          newarr = []
+          newarr.push(arr[i])
+          // console.log(newarr)
+        }
+      }
+      console.log(maxlong)    
+   }
+  //  getLong("pwwkew")
+  // getLong("abcabcbb")
+  // getLong('aab')
+  getLong('dvdf')
+  </script>
+</body>
+</html>
